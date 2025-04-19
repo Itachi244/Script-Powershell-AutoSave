@@ -33,6 +33,9 @@ Logs are stored in the logs/ directory
 The script can be run automatically every day at a specific time using the Windows Task Scheduler
 
 🧠 Technical Constraints : 
-🖥️ Platform: Windows (PowerShell)
-📂 No graphical interface (everything is done via scripts and config files)
-🔧 Usable by other users thanks to a simple configuration file and a clear structure
+
+	🖥️ Platform: Windows (PowerShell)
+
+	📂 No graphical interface (everything is done via scripts and config files)
+
+	🔧 Usable by other users thanks to a simple configuration file and a clear structure
