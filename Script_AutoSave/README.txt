@@ -1,3 +1,5 @@
+FR:
+
 Pour que le script fonctionne il faut changer quelque paramètre du fichier .ps1 et du fichier source.txt.
 
 Dans la section CONFIGURATION, il faut : 
@@ -43,3 +45,72 @@ Pour automatiser le script à l'aide du planificateur de tâche de Windows :
         - Tu peux décocher :
             Démarrer la tâche uniquement si l’ordinateur est en courant alternatif" ⚡
              Et cocher "Exécuter la tâche dès que possible après un démarrage planifié manqué"
+
+
+
+EN: 
+
+To make the script work, you need to modify a few parameters in the .ps1 file and the source.txt file.
+
+In the CONFIGURATION section, you must:
+
+Specify the path to the "Source.txt" file
+
+Specify the path to the directory where you want to save the documents
+
+Specify the path to the logs folder
+
+As for the "source.txt" file:
+
+In this file, you need to list the paths of the folders/files you want to back up
+
+To automate the script using the Windows Task Scheduler:
+
+✅ 1. Open Task Scheduler
+
+Press Win + R, type taskschd.msc, and press Enter
+
+Click "Create Task" in the right panel (not "Create Basic Task" to access more options)
+
+✅ 2. General Tab
+
+Name: Automatic Backup
+
+Check "Run with highest privileges" ✔️ (very important for PowerShell scripts)
+
+Optional: Select "Run whether user is logged on or not" if you want it to run in the background
+
+✅ 3. Triggers Tab
+
+Click "New…" to add a trigger
+
+Begin the task: "On a schedule"
+
+Choose daily, weekly, or another frequency
+
+Set the desired time (e.g., 8:00 PM)
+
+✅ 4. Actions Tab
+
+Click "New…", then:
+
+Action: "Start a program"
+
+Program/script: powershell.exe
+
+Add arguments:
+
+arduino
+Copier
+Modifier
+-ExecutionPolicy Bypass -File "path_to_your_script"
+(Using ExecutionPolicy Bypass allows the script to run even if PowerShell's execution policy is restrictive.)
+
+✅ 5. Conditions and Settings Tabs
+
+You can uncheck:
+"Start the task only if the computer is on AC power" ⚡
+
+And check:
+"Run task as soon as possible after a scheduled start is missed"
+
