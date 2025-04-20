@@ -11,6 +11,7 @@ The goal of this project is to set up an automatic backup system for important f
 In a professional environment, it is crucial to regularly secure critical data (office documents, Excel files, PDFs, local databases, etc.). This project addresses that need by automating the daily backup of such files to a secure location (USB drive, external disk, network folder, etc.).
 
 ⚙️ Main Features
+
 ✅ Backup Configuration
 The user can define:
 
